@@ -15,6 +15,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'normalize-rails'
 gem 'materialize-sass'
 gem 'devise'
+gem 'rails_admin'
 
 group :development, :test do
   gem 'byebug'
