@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  get 'posts/index'
-
   devise_for :users
+  resources :posts, only: [:index]
   root 'pages#home'
 
   # The priority is based upon order of creation: first created -> highest priority.
