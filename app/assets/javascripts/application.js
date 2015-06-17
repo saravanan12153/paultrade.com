@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require materialize-sprockets
 //= require pages
+//= require ckeditor/init
 //= require_tree .

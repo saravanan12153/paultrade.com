@@ -16,10 +16,14 @@ gem 'normalize-rails'
 gem 'materialize-sass'
 gem 'devise'
 gem 'rails_admin'
+gem 'ckeditor'
+gem 'paperclip'
+gem 'fog'
 
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'dotenv-rails'
 end
 
