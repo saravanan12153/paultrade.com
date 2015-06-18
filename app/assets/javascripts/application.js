@@ -16,4 +16,6 @@
 //= require materialize-sprockets
 //= require pages
 //= require ckeditor/init
+//= require toastr
+//= require toastr_config
 //= require_tree .

@@ -1,0 +1,10 @@
+<% unless flash.empty? %>
+    <script type="text/javascript">
+        <% flash.each do |f| %>
+        <% type = f[0].to_s.gsub('alert', 'error').gsub('notice', 'info') %>
+        toastr['<%= type %>']('<%= f[1] %>');
+        <% end %>
+    </script>
+<% end %>
+
+<!--empty file at Users/serge/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/materialize-sass-0.96.2/app/assets/stylesheets/materialize/components/_toast.scss-->

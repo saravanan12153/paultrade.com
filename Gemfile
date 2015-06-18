@@ -19,6 +19,7 @@ gem 'rails_admin'
 gem 'ckeditor'
 gem 'paperclip'
 gem 'fog'
+gem 'toastr-rails' # for notice and alerts
 
 group :development, :test do
   gem 'byebug'
