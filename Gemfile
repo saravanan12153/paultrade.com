@@ -21,6 +21,9 @@ gem 'paperclip'
 gem 'fog'
 gem 'toastr-rails' # for notice and alerts
 gem 'jquery-turbolinks'
+gem 'public_activity'
+gem 'omniauth' # for social networks login
+gem 'omniauth-facebook' # for fb integration
 
 group :development, :test do
   gem 'byebug'
