@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card-image waves-effect waves-block waves-light">
+    <%= image_tag post.photos.first.image.url(:original), class: "activator" %>
+  </div>
+  <div class="card-content">
+    <span class="card-title activator grey-text text-darken-4"><%= post.title %><i class="mdi-navigation-more-vert right"></i></span>
+    <%= link_to "Show", post_url(post), class: "waves-effect waves-light btn light-blue darken-3" %>
+  </div>
+  <div class="card-reveal">
+    <span class="card-title grey-text text-darken-4"><%= post.title %><i class="mdi-navigation-close right"></i></span>
+    <p><%= truncate(raw(post.content), length: 300, separator: ' ') %></p>
+    <%= link_to "Show", post_url(post), class: "waves-effect waves-light btn light-blue darken-3" %>
+  </div>
+</div>

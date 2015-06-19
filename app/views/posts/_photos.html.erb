@@ -1,0 +1,13 @@
+<div class="card-panel white z-depth-3">
+  <div class="card-content">
+    <div class="slider">
+      <ul class="slides">
+        <% @photos.each do |photo| %>
+            <li>
+              <%= image_tag photo.image.url(:original) %>
+            </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

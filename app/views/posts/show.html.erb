@@ -1,1 +1,23 @@
-<%= raw(@post.content) %>
+<div class="container">
+  <div class="row">
+    <div class="col s12 m6 offset-m3">
+      <div class="card-panel white z-depth-5">
+        <div class="card-content center">
+          <h4><%= @post.title %></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12 m6">
+      <%= render 'photos' %>
+    </div>
+    <div class="col s12 m6">
+      <div class="card-panel white z-depth-3">
+        <div class="card-content">
+          <%= raw(@post.content) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

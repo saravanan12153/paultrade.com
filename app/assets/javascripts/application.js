@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require turbolinks
 //= require materialize-sprockets
@@ -18,4 +19,5 @@
 //= require ckeditor/init
 //= require toastr
 //= require toastr_config
+//= require posts
 //= require_tree .

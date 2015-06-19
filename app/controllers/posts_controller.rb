@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   end
 
   def show
-
+    @photos = @post.photos.all
   end
 
   private

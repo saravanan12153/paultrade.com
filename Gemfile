@@ -20,6 +20,7 @@ gem 'ckeditor'
 gem 'paperclip'
 gem 'fog'
 gem 'toastr-rails' # for notice and alerts
+gem 'jquery-turbolinks'
 
 group :development, :test do
   gem 'byebug'
