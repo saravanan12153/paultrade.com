@@ -6,5 +6,6 @@ class User < ActiveRecord::Base
 
   has_many :subscribers, dependent: :destroy
   has_many :posts, through: :subscribers
+  has_many :comments, dependent: :destroy
   validates_presence_of :name
 end

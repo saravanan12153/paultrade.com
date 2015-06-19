@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid">
   <div class="row">
     <div class="col s12 m6 offset-m3">
       <div class="card-panel white z-depth-5">
@@ -16,6 +16,15 @@
       <div class="card-panel white z-depth-3">
         <div class="card-content">
           <%= raw(@post.content) %>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m6">
+      <div class="card-panel white z-depth-3">
+        <div class="card-content">
+          <h5 class="center">Comments<span class="badge" id="comments-size">(<%= @comments.size %> Comments)</span></h5>
+          <%= render 'comments' %>
+          <%= render 'comments/form' %>
         </div>
       </div>
     </div>

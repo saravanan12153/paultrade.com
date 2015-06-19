@@ -1,0 +1,9 @@
+<%= form_for([@post, @comment], remote: true) do |f| %>
+    <div class="field">
+      <%= f.label :content %><br />
+      <%= f.text_area :content, autofocus: true, input_html: {class: "comment-content" } %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Comment" %>
+    </div>
+<% end %>

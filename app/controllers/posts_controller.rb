@@ -7,6 +7,8 @@ class PostsController < ApplicationController
 
   def show
     @photos = @post.photos.all
+    @comments = @post.comments.all
+    @comment = Comment.new
   end
 
   private
