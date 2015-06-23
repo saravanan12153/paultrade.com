@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
     @comment = @post.comments.build(comment_params)
     @comment.user = current_user
     if @comment.save
-      @comment.create_activity key: 'comment.created', owner: @comment.user, recipient: @comment.post
+      # @comment.create_activity key: 'comment.created', owner: @comment.user, recipient: @comment.post
       respond_to do |format|
         format.html {redirect_to post_url(@post), notice: 'Comment Posted!!!'}
         format.js

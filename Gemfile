@@ -24,6 +24,8 @@ gem 'jquery-turbolinks'
 gem 'public_activity'
 gem 'omniauth' # for social networks login
 gem 'omniauth-facebook' # for fb integration
+gem 'mandrill-api', '1.0.52', require: 'mandrill' # for mandrill
+gem 'gibbon' # for mailchimp
 
 group :development, :test do
   gem 'byebug'
