@@ -1,9 +1,14 @@
+<div class="card-panel white z-depth-2">
 <%= form_for([@post, @comment], remote: true) do |f| %>
-    <div class="field">
-      <%= f.label :content %><br />
-      <%= f.text_area :content, autofocus: true, input_html: {class: "comment-content" } %>
+    <div class="input-field">
+      <i class="material-icons prefix">message</i>
+      <%= f.label :content, "Comment" %>
+      <%= f.text_area :content, autofocus: true, class: "comment-content materialize-textarea validate" %>
     </div>
-    <div class="actions">
-      <%= f.submit "Comment" %>
+    <div class="center">
+      <%= button_tag(type: 'submit', class: "waves-effect waves-light btn light-green darken-4") do %>
+          Comment<i class="material-icons right">send</i>
+      <% end %>
     </div>
 <% end %>
+</div>

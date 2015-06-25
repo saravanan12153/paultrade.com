@@ -1,8 +1,8 @@
-<li><%= link_to '<i class="material-icons left">dashboard</i>Posts'.html_safe, posts_path %></li>
+<li class="<%= 'active' if current_page?(posts_path) %>"><%= link_to '<i class="material-icons left">dashboard</i>Posts'.html_safe, posts_path %></li>
 <% if user_signed_in? %>
-    <li><%= link_to "Settings", edit_user_registration_path %></li>
-    <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+    <li class="<%= 'active' if current_page?(edit_user_registration_path) %>"><%= link_to '<i class="material-icons left">settings_applications</i>Settings'.html_safe, edit_user_registration_path %></li>
+    <li><%= link_to '<i class="material-icons left">person_outline</i>Log Out'.html_safe, destroy_user_session_path, method: :delete %></li>
 <% else %>
-    <li><%= link_to '<i class="material-icons left">person_add</i>Sign Up'.html_safe, new_user_registration_path %></li>
-    <li><%= link_to '<i class="material-icons left">person</i>Log In'.html_safe, new_user_session_path %></li>
+    <li class="<%= 'active' if current_page?(new_user_registration_path) %>"><%= link_to '<i class="material-icons left">person_add</i>Sign Up'.html_safe, new_user_registration_path %></li>
+    <li class="<%= 'active' if current_page?(new_user_session_path) %>"><%= link_to '<i class="material-icons left">person</i>Log In'.html_safe, new_user_session_path %></li>
 <% end %>

@@ -1,7 +1,8 @@
-<div class="container">
+<div class="container" id="posts">
   <div class="row">
-    <div class="col s12 m4">
+    <div class="page">
       <%= render @posts %>
     </div>
   </div>
 </div>
+<%= paginate @posts %>

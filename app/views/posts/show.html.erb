@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid" xmlns="http://www.w3.org/1999/html">
   <div class="row">
     <div class="col s12 m6 offset-m3">
       <div class="card-panel white z-depth-5">
@@ -24,7 +24,15 @@
         <div class="card-content">
           <h5 class="center">Comments<span class="badge" id="comments-size">(<%= @comments.size %> Comments)</span></h5>
           <%= render 'comments' %>
-          <%= render 'comments/form' %>
+          <% if user_signed_in? %>
+            <%= render 'comments/form' %>
+          <% else %>
+              <%= link_to root_path do %>
+              <div class="card-panel white z-depth-2">
+                <p class="red-text center"> Please <strong>Log In / Sign Up</strong> to Comment!</p>
+              </div>
+              <% end %>
+          <% end %>
         </div>
       </div>
     </div>

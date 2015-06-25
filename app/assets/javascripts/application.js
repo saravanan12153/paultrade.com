@@ -20,4 +20,6 @@
 //= require toastr
 //= require toastr_config
 //= require posts
+//= require jquery.infinitescroll
+//= require pagination
 //= require_tree .
