@@ -4,14 +4,16 @@
 </div>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <%= render 'shared/devisemes' %>
-    <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true %>
+    <div class="input-field">
+      <i class="material-icons prefix">email</i>
+      <%= f.label :email, "Email" %>
+      <%= f.email_field :email, autofocus: true, class: "validate" %>
     </div>
 
-    <div class="field">
-      <%= f.label :password %><br />
-      <%= f.password_field :password, autocomplete: "off" %>
+    <div class="input-field">
+      <i class="material-icons prefix">security</i>
+      <%= f.label :password, "Password" %>
+      <%= f.password_field :password, autocomplete: "off", class: "validate" %>
     </div>
 
     <% if devise_mapping.rememberable? -%>
@@ -23,7 +25,7 @@
 
     <div class="card-action">
       <%= button_tag(type: 'submit', class: "waves-effect waves-light btn light-green darken-4") do %>
-          <i class="mdi-social-person left"></i> Log In
+          <i class="material-icons left">person</i> Log In
       <% end %>
     </div>
 <% end %>

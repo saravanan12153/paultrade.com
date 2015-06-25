@@ -4,17 +4,21 @@
     <div class="col s12 m6">
       <div class="card-panel white z-depth-3">
         <%= form_tag(contact_us_path) do %>
-            <div class="form-group">
+            <div class="input-field">
+              <i class="material-icons prefix">email</i>
               <%= label_tag 'email', 'Your Email' %>
-              <%= email_field_tag 'email', nil, class: 'form-control', placeholder: 'Your Email Address' %>
+              <%= email_field_tag 'email', nil, class: 'validate' %>
             </div>
-            <div class="form-group">
-              <%= label_tag 'body', 'Content' %>
-              <%= text_area_tag 'body', nil, class: 'form-control', rows: 4, placeholder: 'Content...' %>
+            <div class="input-field">
+              <i class="material-icons prefix">mode_comment</i>
+              <%= label_tag 'body', 'Message...' %>
+              <%= text_area_tag 'body', nil, class: 'materialize-textarea validate', rows: 2 %>
             </div>
+            <div class="center">
             <%= button_tag(type: 'submit', class: "waves-effect waves-light btn light-green darken-4") do %>
-                Submit
+                Send Email<i class="material-icons right">send</i>
             <% end %>
+            </div>
         <% end %>
       </div>
     </div>
