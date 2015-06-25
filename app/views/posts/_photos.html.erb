@@ -4,7 +4,9 @@
       <ul class="slides">
         <% @photos.each do |photo| %>
             <li>
-              <%= image_tag photo.image.url(:original) %>
+              <%= link_to photo.image.url(:original) do %>
+                  <%= image_tag photo.image.url(:original) %>
+              <% end %>
             </li>
         <% end %>
       </ul>
