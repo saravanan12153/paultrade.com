@@ -2,7 +2,7 @@
   <i class="mdi-communication-comment circle"></i>
   <span class="title blue-text"><%= comment.user.name %></span>
   <p>
-    <%= comment.content %>
+    <%= raw(comment.content_html) %>
   </p>
   <p class="grey-text"><%= time_ago_in_words(comment.created_at) %> ago</p>
   <% if comment.user == current_user %>

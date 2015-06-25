@@ -29,6 +29,7 @@ gem "font-awesome-rails"
 gem 'kaminari'
 gem 'friendly_id'
 gem 'acts_as_votable'
+gem "auto_html"
 
 group :development, :test do
   gem 'sqlite3'

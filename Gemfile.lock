@@ -39,6 +39,9 @@ GEM
       tzinfo (~> 1.1)
     acts_as_votable (0.10.0)
     arel (6.0.0)
+    auto_html (1.6.4)
+      redcarpet (~> 3.1)
+      rinku (~> 1.5.0)
     bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -312,9 +315,11 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
     rdoc (4.2.0)
+    redcarpet (3.3.2)
     remotipart (1.2.1)
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
+    rinku (1.5.1)
     safe_yaml (1.0.4)
     sass (3.4.15)
     sass-rails (5.0.3)
@@ -359,6 +364,7 @@ PLATFORMS
 
 DEPENDENCIES
   acts_as_votable
+  auto_html
   byebug
   ckeditor
   coffee-rails (~> 4.1.0)
