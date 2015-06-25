@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show]
+  before_action :authenticate_user!, only: [:upvote, :downvote]
+  before_action :set_post, only: [:show, :upvote, :downvote]
 
   def index
     case params[:sold]
@@ -14,6 +15,16 @@ class PostsController < ApplicationController
     @photos = @post.photos.all
     @comments = @post.comments.all
     @comment = Comment.new
+  end
+
+  def upvote
+    @post.upvote_from current_user
+    redirect_to post_path(@post), notice: "Liked!"
+  end
+
+  def downvote
+    @post.downvote_from current_user
+    redirect_to post_path(@post), notice: "Unliked!"
   end
 
   private

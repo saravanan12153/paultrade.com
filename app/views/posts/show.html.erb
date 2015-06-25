@@ -4,6 +4,10 @@
       <div class="card-panel white z-depth-5">
         <div class="card-content center">
           <h4><%= @post.title %></h4>
+          <p>
+            <%= link_to "<i class='material-icons left'>thumb_up</i>#{@post.get_upvotes.size}".html_safe,like_post_path(@post), method: :put, class:"waves-effect waves-light btn green" %>
+            <%= link_to "<i class='material-icons left'>thumb_down</i>#{@post.get_downvotes.size}".html_safe,unlike_post_path(@post), method: :put, class:"waves-effect waves-light btn red" %>
+          </p>
         </div>
       </div>
     </div>

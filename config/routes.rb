@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {registrations: 'registrations', omniauth_callbacks: "omniauth_callbacks"}
   resources :posts, only: [:index, :show] do
     resources :comments, only: [:create, :destroy]
+    member do
+      put "like" => "posts#upvote"
+      put "unlike" => "posts#downvote"
+    end
   end
   root 'pages#home'
 

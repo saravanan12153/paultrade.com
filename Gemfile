@@ -28,6 +28,7 @@ gem 'gibbon' # for mailchimp
 gem "font-awesome-rails"
 gem 'kaminari'
 gem 'friendly_id'
+gem 'acts_as_votable'
 
 group :development, :test do
   gem 'sqlite3'
