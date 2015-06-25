@@ -5,8 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, :omniauth_providers => [:facebook]
 
-  after_create :send_welcome
-  after_create :subscribe
+  # after_create :send_welcome
+  # after_create :subscribe
 
   has_many :subscribers, dependent: :destroy
   has_many :posts, through: :subscribers

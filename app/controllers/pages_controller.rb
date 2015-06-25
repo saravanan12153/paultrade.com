@@ -6,4 +6,11 @@ class PagesController < ApplicationController
     end
   end
 
+  def contact_us
+    email = params[:email]
+    body = params[:body]
+    MyMailer.contact_email(email, body).deliver
+    redirect_to root_path, notice: "Your Message has been sent to Admin. We would contact you ASAP."
+  end
+
 end

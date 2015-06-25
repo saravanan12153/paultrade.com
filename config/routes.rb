@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  match '/contact_us', to: 'pages#contact_us', via: 'post'
   mount Ckeditor::Engine => '/ckeditor'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users, controllers: {registrations: 'registrations', omniauth_callbacks: "omniauth_callbacks"}

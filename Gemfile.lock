@@ -361,6 +361,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   fog
+  font-awesome-rails
   gibbon
   jbuilder (~> 2.0)
   jquery-rails
