@@ -1,3 +1,12 @@
+<br/>
+<div class="container">
+  <div class="row">
+    <div class="col s12 m12 center">
+      <%= link_to "AVAILABLE", posts_path, class: "waves-effect waves-light btn #{'disabled' unless params[:sold]}" %>
+      <%= link_to "SOLD", posts_path(sold: "true"), class: "waves-effect waves-light btn #{'disabled' if params[:sold] == 'true'}" %>
+    </div>
+  </div>
+</div>
 <div class="container" id="posts">
   <div class="row">
     <div class="page">

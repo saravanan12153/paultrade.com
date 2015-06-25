@@ -27,6 +27,7 @@ gem 'mandrill-api', '1.0.52', require: 'mandrill' # for mandrill
 gem 'gibbon' # for mailchimp
 gem "font-awesome-rails"
 gem 'kaminari'
+gem 'friendly_id'
 
 group :development, :test do
   gem 'sqlite3'

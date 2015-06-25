@@ -2,7 +2,12 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show]
 
   def index
-    @posts = Post.all.order("created_at DESC").page(params[:page]).per(6)
+    case params[:sold]
+      when "true"
+        @posts = Post.where(sold: true).order("created_at DESC").page(params[:page]).per(6)
+      else
+        @posts = Post.where(sold: false).order("created_at DESC").page(params[:page]).per(6)
+    end
   end
 
   def show
@@ -14,7 +19,7 @@ class PostsController < ApplicationController
   private
 
   def set_post
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
   end
 
 end
