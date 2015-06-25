@@ -1,5 +1,7 @@
 <h2 class="center">Sign up</h2>
-
+<div class="center">
+  <%= link_to '<i class="fa fa-facebook-square left"></i>Sign Up with Facebook'.html_safe, user_omniauth_authorize_path(:facebook), class: "waves-effect waves-light btn light-blue darken-4" %>
+</div>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= render 'shared/devisemes' %>
 
