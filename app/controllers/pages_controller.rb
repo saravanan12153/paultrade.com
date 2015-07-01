@@ -4,6 +4,7 @@ class PagesController < ApplicationController
     if user_signed_in?
       redirect_to posts_path
     end
+    @posts = Post.where(sold: false).order("created_at DESC").last(3)
   end
 
   def contact_us
