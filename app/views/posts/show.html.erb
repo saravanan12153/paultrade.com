@@ -31,7 +31,7 @@
           <% if user_signed_in? %>
             <%= render 'comments/form' %>
           <% else %>
-              <%= link_to root_path do %>
+              <%= link_to new_user_session_path do %>
               <div class="card-panel white z-depth-2">
                 <p class="red-text center"> Please <strong>Log In / Sign Up</strong> to Comment!</p>
               </div>
